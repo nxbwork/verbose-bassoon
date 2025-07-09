@@ -1,10 +1,10 @@
+// Last modified: July 9, 2025
+// Component for card payment form with processor selection
+
 import React, { useState, useEffect } from 'react';
 import { getAvailableProcessors } from '../config/paymentProcessors';
 import { validatePaymentAmount, validateEmail } from '../services/paygateService';
 
-/**
- * Component for card payment form with processor selection
- */
 const CardPaymentForm = ({ onPaymentSubmit }) => {
   const [amount, setAmount] = useState('');
   const [email, setEmail] = useState('');
@@ -77,7 +77,7 @@ const CardPaymentForm = ({ onPaymentSubmit }) => {
 
   return (
     <div className="card-payment-form">
-      <h3 className="form-title">Credit Card Payment</h3>
+      <h3 className="form-title">Secure Card Payment</h3>
       
       <form onSubmit={handleSubmit} className="payment-form">
         <div className="form-group">
@@ -114,9 +114,9 @@ const CardPaymentForm = ({ onPaymentSubmit }) => {
             <div className="processor-options">
               {availableProcessors.map((processor) => (
                 <button
-                  key={processor.key}
+                  key={processor.name}
                   type="button"
-                  className={`processor-option ${selectedProcessor?.key === processor.key ? 'active' : ''}`}
+                  className={`processor-option ${selectedProcessor?.name === processor.name ? 'active' : ''}`}
                   onClick={() => setSelectedProcessor(processor)}
                 >
                   <div className="processor-icon">{processor.icon}</div>

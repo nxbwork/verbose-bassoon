@@ -1,4 +1,6 @@
-// Payment processors configuration for PayGate.to integration
+// Last modified: July 9, 2025
+// Payment processors configuration for card payment integration
+
 export const paymentProcessors = {
   stripe: {
     name: 'Stripe',
@@ -6,7 +8,7 @@ export const paymentProcessors = {
     maxAmount: 10000,
     countries: ['US'],
     fees: '2.9% + 30¢',
-    description: 'Credit/debit cards, digital wallets',
+    description: 'Credit/debit cards, digital wallets (North America only)',
     icon: '💳',
     supported: true
   },
@@ -199,28 +201,17 @@ export const paymentProcessors = {
     description: 'Crypto payment gateway',
     icon: '🪙',
     supported: true
-  },
-  transfi: {
-    name: 'Transfi',
-    minAmount: 70,
-    maxAmount: 10000,
-    countries: ['US', 'EU', 'UK'],
-    fees: '2% - 3%',
-    description: 'Cross-border payments',
-    icon: '🌍',
-    supported: true
   }
 };
 
-// Helper function to get available processors for a given amount
+// Get available processors based on amount
 export const getAvailableProcessors = (amount) => {
-  return Object.entries(paymentProcessors)
-    .filter(([, processor]) => processor.supported && amount >= processor.minAmount)
-    .sort((a, b) => a[1].minAmount - b[1].minAmount)
-    .map(([processorKey, processor]) => ({ key: processorKey, ...processor }));
+  return Object.values(paymentProcessors)
+    .filter(processor => processor.supported && amount >= processor.minAmount && amount <= processor.maxAmount)
+    .sort((a, b) => a.minAmount - b.minAmount);
 };
 
-// Helper function to get processor by key
+// Get processor by key
 export const getProcessorByKey = (processorKey) => {
   return paymentProcessors[processorKey] || null;
 }; 

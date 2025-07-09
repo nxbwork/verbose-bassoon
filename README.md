@@ -5,7 +5,7 @@ A modern, responsive donation site supporting both cryptocurrency and card payme
 ## Features
 
 - **Crypto Payments**: Direct wallet addresses with QR codes
-- **Card Payments**: Integration with PayGate.to for secure processing
+- **Card Payments**: Multiple payment processors for secure processing
 - **Responsive Design**: Optimized for desktop and mobile
 - **Copy to Clipboard**: Easy address copying with visual feedback
 - **QR Code Generation**: Local QR code generation for mobile scanning
@@ -15,7 +15,7 @@ A modern, responsive donation site supporting both cryptocurrency and card payme
 - React 18
 - Vite
 - CSS3 with modern features
-- PayGate.to API integration
+- Multiple payment processor integrations
 
 ## Quick Start
 
@@ -40,9 +40,10 @@ npm run build
 - And more...
 
 ### Card Payments
-- Multiple payment processors via PayGate.to
+- Multiple payment processors available
 - Dynamic processor selection based on amount
 - Secure payment processing
+- Note: Stripe is available for North America only
 
 ## Project Structure
 

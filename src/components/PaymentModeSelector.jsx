@@ -1,26 +1,25 @@
+// Last modified: July 9, 2025
+// Component for selecting between crypto and card payment modes
+
 import React from 'react';
 
-/**
- * Component for selecting payment mode (crypto or card)
- */
 const PaymentModeSelector = ({ selectedMode, onModeChange }) => {
-  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 700;
   return (
     <div className="payment-mode-selector">
-      <h2 className="section-title">Choose your payment method</h2>
+      <h2>Choose Payment Method</h2>
       <div className="mode-options">
         <button
           className={`mode-option ${selectedMode === 'crypto' ? 'active' : ''}`}
           onClick={() => onModeChange('crypto')}
         >
-          <div className={`mode-icon${isMobile ? ' mobile' : ''}`}>🪙</div>
+          <span className="mode-icon">₿</span>
           <div className="mode-content">
-            <h3>Cryptocurrencies</h3>
-            {!isMobile && <p>Direct cryptocurrency payments</p>}
+            <h3>Cryptocurrency</h3>
+            <p>Pay directly with crypto</p>
             <ul>
-              <li>No additional fees</li>
-              {isMobile ? null : <li>Instant payment</li>}
-              {isMobile ? null : <li>Support for many cryptocurrencies</li>}
+              <li>No fees</li>
+              <li>Instant confirmation</li>
+              <li>Multiple cryptocurrencies</li>
             </ul>
           </div>
         </button>
@@ -29,14 +28,14 @@ const PaymentModeSelector = ({ selectedMode, onModeChange }) => {
           className={`mode-option ${selectedMode === 'card' ? 'active' : ''}`}
           onClick={() => onModeChange('card')}
         >
-          <div className={`mode-icon${isMobile ? ' mobile' : ''}`}>💳</div>
+          <span className="mode-icon">💳</span>
           <div className="mode-content">
-            <h3>Credit Card</h3>
-            {!isMobile && <p>Card payment via PayGate.to</p>}
+            <h3>Credit/Debit Card</h3>
+            <p>Secure card payment</p>
             <ul>
-              <li>Automatic conversion to USDC</li>
-              {isMobile ? null : <li>Variable fees depending on processor</li>}
-              {isMobile ? null : <li>Minimum amounts vary by processor</li>}
+              <li>Multiple processors</li>
+              <li>Instant processing</li>
+              <li>Global availability</li>
             </ul>
           </div>
         </button>
