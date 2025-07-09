@@ -4,6 +4,7 @@
 export const paymentProcessors = {
   stripe: {
     name: 'Stripe',
+    key: 'stripe',
     minAmount: 2,
     maxAmount: 10000,
     countries: ['US'],
@@ -14,6 +15,7 @@ export const paymentProcessors = {
   },
   coinbase: {
     name: 'Coinbase Pay',
+    key: 'coinbase',
     minAmount: 2,
     maxAmount: 50000,
     countries: ['US', 'EU', 'UK'],
@@ -24,6 +26,7 @@ export const paymentProcessors = {
   },
   rampnetwork: {
     name: 'Ramp Network',
+    key: 'rampnetwork',
     minAmount: 4,
     maxAmount: 20000,
     countries: ['US', 'EU', 'UK', 'CA'],
@@ -34,6 +37,7 @@ export const paymentProcessors = {
   },
   robinhood: {
     name: 'Robinhood',
+    key: 'robinhood',
     minAmount: 5,
     maxAmount: 10000,
     countries: ['US'],
@@ -44,6 +48,7 @@ export const paymentProcessors = {
   },
   unlimit: {
     name: 'Unlimit',
+    key: 'unlimit',
     minAmount: 10,
     maxAmount: 50000,
     countries: ['US', 'EU', 'UK'],
@@ -54,6 +59,7 @@ export const paymentProcessors = {
   },
   bitnovo: {
     name: 'Bitnovo',
+    key: 'bitnovo',
     minAmount: 10,
     maxAmount: 1000,
     countries: ['ES', 'IT', 'PT'],
@@ -64,6 +70,7 @@ export const paymentProcessors = {
   },
   swipelux: {
     name: 'SwipeLux',
+    key: 'swipelux',
     minAmount: 14,
     maxAmount: 5000,
     countries: ['US'],
@@ -74,6 +81,7 @@ export const paymentProcessors = {
   },
   alchemypay: {
     name: 'Alchemy Pay',
+    key: 'alchemypay',
     minAmount: 15,
     maxAmount: 10000,
     countries: ['US', 'EU', 'UK', 'SG'],
@@ -84,6 +92,7 @@ export const paymentProcessors = {
   },
   revolut: {
     name: 'Revolut',
+    key: 'revolut',
     minAmount: 15,
     maxAmount: 10000,
     countries: ['US', 'EU', 'UK'],
@@ -94,6 +103,7 @@ export const paymentProcessors = {
   },
   transak: {
     name: 'Transak',
+    key: 'transak',
     minAmount: 15,
     maxAmount: 20000,
     countries: ['US', 'EU', 'UK', 'IN'],
@@ -104,6 +114,7 @@ export const paymentProcessors = {
   },
   moonpay: {
     name: 'MoonPay',
+    key: 'moonpay',
     minAmount: 20,
     maxAmount: 50000,
     countries: ['US', 'EU', 'UK', 'CA'],
@@ -114,6 +125,7 @@ export const paymentProcessors = {
   },
   banxa: {
     name: 'Banxa',
+    key: 'banxa',
     minAmount: 20,
     maxAmount: 20000,
     countries: ['US', 'EU', 'UK', 'AU'],
@@ -124,6 +136,7 @@ export const paymentProcessors = {
   },
   guardarian: {
     name: 'Guardarian',
+    key: 'guardarian',
     minAmount: 20,
     maxAmount: 15000,
     countries: ['US', 'EU', 'UK'],
@@ -134,6 +147,7 @@ export const paymentProcessors = {
   },
   mercuryo: {
     name: 'Mercuryo',
+    key: 'mercuryo',
     minAmount: 30,
     maxAmount: 10000,
     countries: ['US', 'EU', 'UK'],
@@ -144,6 +158,7 @@ export const paymentProcessors = {
   },
   simpleswap: {
     name: 'SimpleSwap',
+    key: 'simpleswap',
     minAmount: 30,
     maxAmount: 5000,
     countries: ['US', 'EU', 'UK'],
@@ -154,6 +169,7 @@ export const paymentProcessors = {
   },
   sardine: {
     name: 'Sardine',
+    key: 'sardine',
     minAmount: 30,
     maxAmount: 10000,
     countries: ['US'],
@@ -164,6 +180,7 @@ export const paymentProcessors = {
   },
   particle: {
     name: 'Particle Network',
+    key: 'particle',
     minAmount: 30,
     maxAmount: 5000,
     countries: ['US', 'EU', 'UK'],
@@ -174,6 +191,7 @@ export const paymentProcessors = {
   },
   finchpay: {
     name: 'FinchPay',
+    key: 'finchpay',
     minAmount: 40,
     maxAmount: 10000,
     countries: ['US'],
@@ -184,6 +202,7 @@ export const paymentProcessors = {
   },
   simplex: {
     name: 'Simplex',
+    key: 'simplex',
     minAmount: 50,
     maxAmount: 20000,
     countries: ['US', 'EU', 'UK'],
@@ -194,6 +213,7 @@ export const paymentProcessors = {
   },
   utorg: {
     name: 'UTORG',
+    key: 'utorg',
     minAmount: 50,
     maxAmount: 15000,
     countries: ['US', 'EU', 'UK'],

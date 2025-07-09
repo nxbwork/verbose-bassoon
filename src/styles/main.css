@@ -367,6 +367,14 @@ body {
   color: #888;
 }
 
+.processor-hint {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+  margin-top: 8px;
+  text-align: center;
+}
+
 .no-processors {
   text-align: center;
   padding: 40px 20px;

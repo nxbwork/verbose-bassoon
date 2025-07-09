@@ -18,7 +18,8 @@ const CardPaymentForm = ({ onPaymentSubmit }) => {
     if (amount && !isNaN(amount) && amount > 0) {
       const processors = getAvailableProcessors(parseFloat(amount));
       setAvailableProcessors(processors);
-      setSelectedProcessor(processors.length > 0 ? processors[0] : null);
+      // Don't auto-select processor - let user choose
+      setSelectedProcessor(null);
     } else {
       setAvailableProcessors([]);
       setSelectedProcessor(null);
@@ -110,7 +111,7 @@ const CardPaymentForm = ({ onPaymentSubmit }) => {
 
         {amount && availableProcessors.length > 0 && (
           <div className="form-group">
-            <label>Available payment processor</label>
+            <label>Select a payment processor</label>
             <div className="processor-options">
               {availableProcessors.map((processor) => (
                 <button
@@ -131,6 +132,9 @@ const CardPaymentForm = ({ onPaymentSubmit }) => {
                 </button>
               ))}
             </div>
+            {!selectedProcessor && availableProcessors.length > 0 && (
+              <p className="processor-hint">Please select a payment processor to continue</p>
+            )}
             {errors.processor && <span className="error-message">{errors.processor}</span>}
           </div>
         )}
